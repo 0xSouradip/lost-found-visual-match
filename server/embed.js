@@ -1,4 +1,4 @@
-﻿import { pipeline, RawImage } from '@xenova/transformers';
+import { pipeline, RawImage } from '@xenova/transformers';
 
 let extractor = null;
 let tokenizer = null;

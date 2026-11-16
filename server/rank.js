@@ -1,4 +1,4 @@
-﻿import { cosine } from './embed.js';
+import { cosine } from './embed.js';
 
 function parseDate(d){ const t = d ? new Date(d).getTime() : NaN; return isNaN(t)?null:t; }
 function daysBetween(a,b){ if(a==null||b==null) return null; return Math.abs(a-b)/(1000*60*60*24); }
