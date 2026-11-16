@@ -17,23 +17,23 @@ const CATEGORY_ICONS = {
 };
 
 const COLOR_MAP = {
-  navy: '#1e3a8a',
-  blue: '#2563eb',
-  black: '#1f2937',
-  grey: '#4b5563',
-  gray: '#4b5563',
-  brown: '#78350f',
-  white: '#94a3b8',
-  silver: '#64748b',
-  red: '#dc2626',
-  green: '#16a34a',
-  pink: '#db2777',
-  gold: '#d97706'
+  navy: '#0C7075',
+  blue: '#0F969C',
+  black: '#072E33',
+  grey: '#294D61',
+  gray: '#294D61',
+  brown: '#4a2c11',
+  white: '#6DA5C0',
+  silver: '#6DA5C0',
+  red: '#be123c',
+  green: '#047857',
+  pink: '#be185d',
+  gold: '#b45309'
 };
 
 export function makeSvgThumb(category = 'Item', color = '', brand = '') {
   const normColor = (color || '').toLowerCase().trim();
-  const hex = COLOR_MAP[normColor] || '#475569';
+  const hex = COLOR_MAP[normColor] || '#294D61';
   const icon = CATEGORY_ICONS[category] || '📦';
   const title = [brand, category].filter(Boolean).join(' ');
 
@@ -41,14 +41,14 @@ export function makeSvgThumb(category = 'Item', color = '', brand = '') {
     <defs>
       <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="${hex}" stop-opacity="0.85"/>
-        <stop offset="100%" stop-color="#383838" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#072E33" stop-opacity="0.95"/>
       </linearGradient>
     </defs>
     <rect width="360" height="220" fill="url(#bg)"/>
-    <circle cx="180" cy="85" r="46" fill="#383838" fill-opacity="0.65" stroke="#F6C56B" stroke-width="2"/>
-    <text x="180" y="96" fill="#EDEDED" font-size="34" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" text-anchor="middle">${icon}</text>
-    <text x="180" y="152" fill="#EDEDED" font-size="16" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" text-anchor="middle">${escapeXml(title)}</text>
-    <text x="180" y="176" fill="#B8B8B8" font-size="13" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" text-anchor="middle">${escapeXml(color ? `Color: ${color}` : '')}</text>
+    <circle cx="180" cy="85" r="46" fill="#05161A" fill-opacity="0.75" stroke="#0F969C" stroke-width="2"/>
+    <text x="180" y="96" fill="#f0fdfa" font-size="34" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" text-anchor="middle">${icon}</text>
+    <text x="180" y="152" fill="#f0fdfa" font-size="16" font-weight="600" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" text-anchor="middle">${escapeXml(title)}</text>
+    <text x="180" y="176" fill="#6DA5C0" font-size="13" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif" text-anchor="middle">${escapeXml(color ? `Color: ${color}` : '')}</text>
   </svg>`;
 
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;

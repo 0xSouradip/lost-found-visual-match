@@ -1,18 +1,25 @@
 :root {
-  --bg: #212121;
-  --card: #383838;
-  --card-hover: #424242;
-  --muted: #B8B8B8;
-  --text: #EDEDED;
-  --accent: #F6C56B;
-  --accent-hover: #f9d58f;
-  --accent-contrast: #1f1f1f;
+  --bg: #05161A;
+  --bg-gradient-end: #030e11;
+  --card: #072E33;
+  --card-hover: #0a3a40;
+  --card-border: #294D61;
+  --border: rgba(41, 77, 97, 0.6);
+  --border-focus: #0F969C;
+  --input-bg: #05161A;
+  --btn-bg: #294D61;
+  --btn-hover: #0C7075;
+  --text: #f0fdfa;
+  --muted: #6DA5C0;
+  --accent: #0F969C;
+  --accent-hover: #13b6bd;
+  --accent-dark: #0C7075;
+  --accent-contrast: #05161A;
+  --pill-bg: rgba(12, 112, 117, 0.35);
+  --pill-border: rgba(15, 150, 156, 0.5);
   --accent2: #4ade80;
   --warn: #F6C56B;
   --danger: #ef4444;
-  --border: rgba(184, 184, 184, 0.22);
-  --border-focus: #F6C56B;
-  --input-bg: #2a2a2a;
 }
 
 * {
@@ -22,7 +29,7 @@
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-  background: linear-gradient(180deg, #242424 0%, #1a1a1a 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-gradient-end) 100%);
   color: var(--text);
   min-height: 100vh;
 }
@@ -78,7 +85,7 @@ nav {
 
 button,
 .btn {
-  background: var(--card);
+  background: var(--btn-bg);
   color: var(--text);
   border: 1px solid var(--border);
   padding: 10px 16px;
@@ -91,8 +98,8 @@ button,
 
 button:hover,
 .btn:hover {
-  background: var(--card-hover);
-  border-color: var(--muted);
+  background: var(--btn-hover);
+  border-color: var(--accent);
 }
 
 button.primary {
@@ -118,12 +125,13 @@ button.primary:hover {
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-  transition: transform 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 4px 16px rgba(5, 22, 26, 0.45);
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .card:hover {
-  border-color: rgba(246, 197, 107, 0.4);
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(15, 150, 156, 0.2);
   transform: translateY(-2px);
 }
 
@@ -135,7 +143,7 @@ button.primary:hover {
   width: 100%;
   height: 175px;
   object-fit: cover;
-  background: #2b2b2b;
+  background: #05161A;
   display: block;
 }
 
@@ -181,7 +189,7 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--border-focus);
-  box-shadow: 0 0 0 2px rgba(246, 197, 107, 0.25);
+  box-shadow: 0 0 0 2px rgba(15, 150, 156, 0.35);
 }
 
 textarea {
@@ -195,16 +203,16 @@ textarea {
   border-radius: 14px;
   padding: 18px;
   margin-bottom: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 16px rgba(5, 22, 26, 0.35);
 }
 
 .pill {
   display: inline-block;
   padding: 4px 10px;
   border-radius: 999px;
-  background: rgba(246, 197, 107, 0.14);
-  color: var(--accent);
-  border: 1px solid rgba(246, 197, 107, 0.35);
+  background: var(--pill-bg);
+  color: var(--muted);
+  border: 1px solid var(--pill-border);
   font-size: 0.8rem;
   font-weight: 600;
   margin-right: 6px;
@@ -212,17 +220,17 @@ textarea {
 
 .scorebar {
   height: 8px;
-  background: #242424;
+  background: #05161A;
   border-radius: 999px;
   overflow: hidden;
   margin: 5px 0 10px;
-  border: 1px solid rgba(184, 184, 184, 0.12);
+  border: 1px solid var(--border);
 }
 
 .scorebar > span {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, #F6C56B, #e5a73b);
+  background: linear-gradient(90deg, #0C7075, #0F969C, #6DA5C0);
   border-radius: 999px;
 }
 
@@ -237,7 +245,7 @@ textarea {
 .modalbg {
   position: fixed;
   inset: 0;
-  background: rgba(18, 18, 18, 0.82);
+  background: rgba(5, 22, 26, 0.85);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -250,10 +258,10 @@ textarea {
   max-width: 520px;
   width: 100%;
   background: var(--card);
-  border: 1px solid rgba(184, 184, 184, 0.3);
+  border: 1px solid var(--card-border);
   border-radius: 14px;
   padding: 20px;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 12px 40px rgba(5, 22, 26, 0.7);
 }
 
 .ok {
@@ -265,12 +273,12 @@ textarea {
 }
 
 .hero {
-  background: linear-gradient(135deg, #383838 0%, #292929 100%);
-  border: 1px solid rgba(246, 197, 107, 0.35);
+  background: linear-gradient(135deg, #072E33 0%, #05161A 100%);
+  border: 1px solid var(--accent-dark);
   border-radius: 16px;
   padding: 18px 20px;
   margin-bottom: 18px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 18px rgba(5, 22, 26, 0.4);
 }
 
 .hero b {
@@ -304,7 +312,7 @@ textarea {
   border: 1px dashed var(--accent);
   border-radius: 10px;
   color: var(--text);
-  background: rgba(246, 197, 107, 0.08);
+  background: rgba(12, 112, 117, 0.16);
   line-height: 1.5;
 }
 
@@ -313,8 +321,8 @@ textarea {
 }
 
 .notice code {
-  background: #2a2a2a;
-  color: var(--accent);
+  background: #05161A;
+  color: var(--muted);
   padding: 2px 6px;
   border-radius: 6px;
   font-size: 0.85rem;
