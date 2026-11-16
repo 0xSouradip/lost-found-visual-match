@@ -4,6 +4,10 @@ Post a photo of something you found, and the system helps find the person who lo
 
 > Hackathon-ready prototype: upload/search by image or text, view ranked matches with score breakdowns, and complete a privacy-conscious claim & verification flow.
 
+## Live website
+- **GitHub Pages (frontend UI):** https://0xsouradip.github.io/lost-found-visual-match/
+- **Note:** This is a full-stack app (React + Express API + SQLite + CLIP embeddings). GitHub Pages hosts the **static frontend only**, so features that require the backend (`/api`, uploads, embedding/matching, claims persistence) won’t function there. For full working condition, run the project locally (see [Setup & run](#setup--run)) or deploy the backend to a server/platform that supports Node.js.
+
 ## Problem
 Traditional lost-and-found systems rely on keyword search and manual scrolling. Descriptions like **"blue bottle"** vs **"navy water bottle with stickers"** often fail to match. Photos (and visual embeddings) make matching far more effective.
 
