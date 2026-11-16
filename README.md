@@ -1,4 +1,9 @@
-# Lost & Found — Visual Match
+# 🔍 Lost & Found — Visual Match
+### *Multimodal AI-Powered Lost & Found System with CLIP Embeddings & Privacy-Conscious Claim Verification*
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-0F969C?style=for-the-badge&logo=github)](https://0xsouradip.github.io/lost-found-visual-match/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-294D61?style=for-the-badge&logo=github)](https://github.com/0xSouradip/lost-found-visual-match)
+[![Innovation Team](https://img.shields.io/badge/Innovation%20Team-Student%20Engineers-0C7075?style=for-the-badge)](https://github.com/0xSouradip/lost-found-visual-match#-the-innovation-team)
 
 Post a photo of something you found, and the system helps find the person who lost it — by **how the object looks**, not by whether they typed the same keywords.
 
