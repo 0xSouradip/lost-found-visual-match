@@ -138,3 +138,23 @@ Open `http://localhost:3001` to use the built app served by Express.
 - Better attribute extraction (multimodal LLM -> structured tags)
 - Notifications, organizer/staff dashboard, rate-limiting/abuse controls
 - Map/geo-radius support and richer audit/privacy controls
+
+
+---
+
+## 👥 The Innovation Team
+
+We are a group of passionate engineering students dedicated to creating intelligent, privacy-first technologies using multimodal AI and modern web architectures.
+
+| <img src="assets/team/souradip.jpg" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: 78% 25%;"> | <img src="assets/team/angshu.jpg" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: center 20%;"> | <img src="assets/team/sneha.png" width="130" height="130" style="border-radius: 50%; object-fit: cover; object-position: center 15%;"> |
+| :---: | :---: | :---: |
+| **SOURADIP GHOSH** | **ANGSHU SARKAR** | **SNEHA MUKHERJEE** |
+| **Lead Engineer & AI Architect** | **Frontend Engineer** | **Frontend Engineer** |
+| *Engineering Student* | *Engineering Student* | *Engineering Student* |
+| CLIP vector embeddings, multimodal ranking algorithm & backend architecture | Responsive React UI, oceanic design system & visual scoring bars | User workflows, accessibility (WCAG), state trapping & claim verification |
+| [GitHub](https://github.com/0xSouradip) • [Email](mailto:ghoshsouradip02@gmail.com) | [GitHub](https://github.com/0xSouradip/lost-found-visual-match) • [Email](mailto:sarkarangshu04@gmail.com) | [GitHub](https://github.com/0xSouradip/lost-found-visual-match) • [Email](mailto:snehamukherjee387@gmail.com) |
+
+---
+
+## 📄 License & Citation
+Developed by **Souradip Ghosh**, **Angshu Sarkar**, and **Sneha Mukherjee** for **Lost & Found — Visual Match**.

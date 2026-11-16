@@ -595,3 +595,78 @@ function MatchCard({ m, session, isDemo, onClaimDone }) {
     </div>
   );
 }
+
+
+function TeamView() {
+  const base = import.meta.env.BASE_URL || './';
+  const members = [
+    {
+      name: 'Souradip Ghosh',
+      role: 'Lead Engineer & AI Architect',
+      photo: `${base}team/souradip.jpg`,
+      bio: '19-year-old student with a Pure Science background and a deep passion for technology, distributed systems, and applied AI. Architected the CLIP vector search engine, blended ranking model, and full-stack system architecture.',
+      skills: 'CLIP Embeddings · Multimodal Ranking · System Architecture · Full-Stack',
+      github: 'https://github.com/0xSouradip',
+      email: 'mailto:ghoshsouradip02@gmail.com'
+    },
+    {
+      name: 'Angshu Sarkar',
+      role: 'Frontend Engineer',
+      photo: `${base}team/angshu.jpg`,
+      bio: 'Computer science student and creative frontend developer. Built the modular interactive React component library, design token synchronization, visual score breakdown displays, and responsive state handling.',
+      skills: 'React · Oceanic UI System · Visual Scoring HUD · Responsive UX',
+      github: 'https://github.com/0xSouradip/lost-found-visual-match',
+      email: 'mailto:sarkarangshu04@gmail.com'
+    },
+    {
+      name: 'Sneha Mukherjee',
+      role: 'Frontend Engineer',
+      photo: `${base}team/sneha.png`,
+      bio: 'Tech student focusing on modern UI/UX engineering, WCAG accessibility standards, user flow optimization, and intuitive claim & verification security workflows.',
+      skills: 'UI/UX Workflows · Accessibility (WCAG) · Claim Verification · State Trapping',
+      github: 'https://github.com/0xSouradip/lost-found-visual-match',
+      email: 'mailto:snehamukherjee387@gmail.com'
+    }
+  ];
+
+  return (
+    <div>
+      <div className="panel">
+        <h2 style={{ marginTop: 0 }}>👥 The Engineering Team</h2>
+        <p className="muted" style={{ margin: '4px 0 16px' }}>
+          Passionate engineering students dedicated to creating intelligent, privacy-first technologies using multimodal AI and modern web architectures.
+        </p>
+        <div className="team-grid">
+          {members.map((m) => (
+            <div className="team-card" key={m.name}>
+              <img
+                className="team-avatar"
+                src={m.photo}
+                alt={m.name}
+                onError={(e) => { e.target.style.display = 'none'; }}
+              />
+              <div className="team-name">{m.name}</div>
+              <div className="team-role">{m.role}</div>
+              <div className="team-bio">{m.bio}</div>
+              <div style={{ marginBottom: 14 }}>
+                <span className="pill small">{m.skills}</span>
+              </div>
+              <div className="team-links">
+                {m.github && (
+                  <a href={m.github} target="_blank" rel="noreferrer">
+                    GitHub
+                  </a>
+                )}
+                {m.email && (
+                  <a href={m.email}>
+                    Email
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
